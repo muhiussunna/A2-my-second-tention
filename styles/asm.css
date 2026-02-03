@@ -44,6 +44,7 @@ background-color: rgba(26, 11, 46, 1);;
 .nav-link{
   text-decoration: none;
   font-weight: 500;
+  display: flex;
 }
 .btn-primary{
 border-radius:100000px;
@@ -144,6 +145,7 @@ background: none;
    color: #828282;
 }
 #mid-banner {
+  display: grid;
   background-color: #1d0739;
 }
 .choose-card{
@@ -181,7 +183,8 @@ overflow: hidden;
    border-radius: 24PX;
 }
 .video-container {
- display: flex;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
 max-width: 1200px;
 height: 440px;
 gap: 30px;
@@ -199,20 +202,20 @@ padding: 24px;
    
 }
 .alex-container {
-  border: 40px;
+  padding: 40px;
+  flex-direction: column;
   background-color:rgba(53, 17, 101, 0.4);
   border-radius: 16px;
   display: flex;
   align-items: center;
-gap: 24px;
-padding: 40px;
+gap: 12px;
 
 }
 .alex-icon {
   display: flex;
   gap: 8px;
-justify-content: flex-start;
-align-items: flex-start;
+/* justify-content: flex-start; */
+align-items: center;
 }
 .Featured-section {
   padding: 60px 100px;
@@ -240,3 +243,22 @@ align-items: center;
     display: flex;
  gap: 8px;
 }
+
+@media screen and (max-width: 576px) {
+
+ .navbar, .nav-link{
+    flex-direction: column;
+    gap: 10px;
+  }
+.video-container, .container, .alex-container {
+  grid-template-columns: repeat(1,1fr);
+}
+.Podcast-container {
+  grid-template-columns: repeat(2,1fr);
+}
+ 
+}
+
+
+
+
